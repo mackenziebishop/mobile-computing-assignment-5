@@ -21,10 +21,24 @@ class ViewController: UIViewController {
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var playAgainButton: UIButton!
     
+    @IBOutlet weak var displayImage: UIImageView!
+    
+    var words = [
+        ["Apple", "Computer brand"],
+        ["Banana", "Yellow fruit"],
+        ["Batman", "The Dark Knight"],
+        ["Superman", "Clark Kent"],
+        ["Snoopy", "Charlie Brown's dog"]
+    ]
+    var count = 0
+    var word = ""
+    var lettersGuessed = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        playAgainButton.isEnabled = false
+        word = words[count][0]
     }
     @IBAction func guessLetterButtonPressed(_ sender: Any) {
     }
